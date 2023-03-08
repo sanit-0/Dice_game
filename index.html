@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice</title>
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+ <!--font-h1-->   <link href="https://fonts.googleapis.com/css2?family=Labrada&display=swap" rel="stylesheet">
+
+ <!--font-p-->   <link href="https://fonts.googleapis.com/css2?family=Labrada&family=Lato&display=swap" rel="stylesheet"> 
+
+ <!--font-#text1-->  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Jost&family=Kalam&family=Montserrat:wght@400;700&family=Open+Sans&family=Poppins&family=Raleway:wght@400;800&display=swap" rel="stylesheet">
+
+ <!--font-lets play--> <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Jost&family=Kalam&family=Montserrat:wght@400;700&family=Open+Sans&family=Poppins&family=Raleway:wght@400;800&family=Shantell+Sans&display=swap" rel="stylesheet">
+  
+    <style>
+
+      
+        .start{
+            padding: 50px 0;
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+/*            background-color:#042f4b;*/
+            background-image: url("bg2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+/*            display: none; */
+        }
+        .start h1 img{
+
+            width: 500px;
+            height: 194px;
+
+        }
+        .start button{
+/*            background-color:  #4ecca3;*/
+             background-color: #232931;
+            border: none;
+            color: white;
+
+
+        }
+        .start button:hover{
+             background-color: #229954;
+                box-shadow: 10px 10px;
+                color: white;
+        }
+        .start #text1{
+/*            font-family: 'Lato', sans-serif;*/
+            font-family: 'Kalam', cursive;
+
+/*            color: #4ecca3;*/
+/*            color: #4ecca3;*/
+            color: black;
+            font-size: 35px;
+
+
+        }
+
+
+       
+
+        .start input{
+            box-shadow: 5px 5px 10px; 
+            padding: 4px 10px;
+            border-radius: 5px;
+/*            outline: black;*/
+            border: none;
+        }
+        .start #epnum{
+            height: 30px;
+            width: 180px;
+            color: red;
+            font-size: 20px;
+             animation-name:blink-2;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+        }
+
+         @keyframes blink-2 {        /*error animation*/
+              0% {
+                opacity: 1;
+/*                transform: scale(0.8);*/
+              }
+              50% {
+                opacity: 0.2;
+/*                transform: scale(0.9);*/
+
+              }
+              100% {
+                opacity: 1;
+
+              }
+        }
+
+/*           /////----------mmedia querie------\\\\\\*/
+
+         @media screen and (max-width:624px){
+            
+             .start h1 img{
+
+                width: 300px;
+                height: 94px;
+            }
+           
+
+        }
+
+
+        
+
+        p{
+/*            font-family: 'Lato', sans-serif;*/
+/*            font-size: 20px;*/
+
+        }
+
+/*        ///////////--------main css---------\\\\\\\\\\\*/
+        .main{
+            padding: 50px 0;
+            width: 100%;
+           /* height: 100vh; */
+            text-align: center;
+/*            background-color:#042f4b;*/
+            background-image: url("bg2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+            display: none;
+        }
+
+        #box1{
+            height: 180px;
+            width: 150px;
+/*             border: 1px solid black;*/
+/*             box-shadow: 10px 10px 10px;*/
+        }
+
+        .main h1{
+
+/*            font-family: 'Labrada', serif;*/
+            font-family: 'Shantell Sans', cursive;
+            font-size: 70px;
+            padding-bottom: 30px;
+            font-weight: bold;
+            color: #ECF0F1;
+        }
+
+
+        .main p{
+            font-family: 'Lato', sans-serif;
+            font-size: 25px;
+
+        }
+        .main #box1 img{
+             box-shadow: 10px 10px 10px;
+             border-radius: 25px;
+/*             background-color: rgba(0, 0, 0,0.5);*/
+
+        }
+        .main .btn1{
+            margin-top: 20px;
+        }
+        
+        .main .btn1 button{
+            background-color: #048562;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+
+        }
+        .main .btn1 button:hover{
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+            transform: translateY(-2px);
+
+        }
+
+        .main .btn2 button{
+            background-color: #E73D2F;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+
+        }
+        .main .btn2 button:hover{
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+            transform: translateY(-2px);
+
+        }
+        #ansbox{
+            height: 40px;
+        }
+
+        .btn{
+            box-shadow: none !important;
+        }
+         @media screen and (max-width:624px){
+
+            .me-4{
+                margin-right: 0 !important;
+                margin-bottom: 10px;
+            }
+            #box1 img{
+                height:100px !important;
+                width: 100px !important;
+
+            }
+            .main .text-end{
+                text-align: center !important;
+                
+            }
+
+        }
+
+
+/*        //////------last page css ---------\\\\\\\\*/
+
+
+        .modal1{
+            background-color: rgba(0,0,0,0.5);
+             height: 100vh;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            display: none;
+/*            display: flex;*/
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .last{
+/*            height:100%;*/
+/*            width: 50%;*/
+            background-color: rgb(248,195,1);           
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border: 5px solid yellow;
+
+
+
+        }
+
+
+        .last .mcloseb{
+            cursor: pointer;
+        }
+
+        .last .mcloseb img:hover{
+            transform: scale(1.1);
+        }
+
+        .last p{
+            font-family: 'Lato', sans-serif;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .last .lscore{
+            box-shadow: 5px 5px 5px  rgba(0,0,0,0.5), 2px 2px 5px  rgba(0,0,0,0.5) inset;
+            
+            border-radius: 5px;
+            padding: 5px 18px;
+            font-family: 'Lato', sans-serif;
+            font-size: 20px;
+
+            width:70px;
+            height: 35px;
+           
+
+        }
+        .last h3{
+            font-family: 'Shantell Sans', cursive;
+            font-size:40px;
+            font-style: italic;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation-name:scale-up-center;
+            animation-duration:0.9s;
+            animation-direction: alternate;
+            animation-iteration-count:infinite ;
+
+        } 
+
+
+        @keyframes scale-up-center {
+          0% {
+            -webkit-transform: scale(0.7);
+                    transform: scale(0.7);
+          }
+          100% {
+            -webkit-transform: scale(1);
+                    transform: scale(1);
+          }
+        }
+
+
+
+
+        .last button{
+            background-color: rgb(150,16,21);
+            color: white;
+            border: 2px solid white;
+            font-style: italic;
+
+        }
+        .last button:hover{
+            box-shadow: 5px 5px 5px rgb(0,0,0,0.5);
+            transform: scale(1.1);
+        }
+
+
+
+
+    
+        
+
+         .last .smimg{
+                display: none;
+         }
+
+      
+         @media screen and (max-width:624px){
+            .last .mcloseb img{
+                 width:30px;
+
+                height:30px;
+            }
+
+            .last .lgimg{
+                display: none;
+            }
+
+            .last .smimg{
+                display: block;
+
+            }
+            .last h3{
+                font-size:30px;
+            }
+            
+           
+
+
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="start flex-column align-items-center ">
+        <!-- <h1>Dice Game</h1> -->
+
+        <h1 id="logo"> <img src="logo-3.png">     </h1>
+
+
+        <p id="text1" class=" my-5 ">Enter players name </p>
+        
+
+        <div class="mb-4 mt-4  ">
+            <input type="text" name="" id="inp1" placeholder="1st player" class="me-4"> 
+
+              <input type="text" name="" id="inp2" placeholder="2nd player">
+
+        </div>
+        <div class=" d-flex justify-content-center">
+            <p id="epnum" class=""></p>
+            <!-- <p>Enter name</p> -->
+
+        </div>
+
+         <button class="mt-3 btn" onclick="game()">START GAME</button>       
+    </div>
+
+
+
+<!-- ////////////-------main---------\\\\\\\\\\\\\\\\ -->
+
+
+   <div class="main">
+
+        <div class="text-center mb-4">
+            <h1>Let's Play</h1>
+
+            <div class="d-flex justify-content-center  ">
+                <p id="uname1">  </p>
+                <p id="user1"> </p>
+            </div>
+             
+             <div  class="d-flex  justify-content-center">
+                 <p id="uname2">  </p>
+                <p id="user2"> </p>
+             </div>
+
+             
+
+
+
+            <!-- <p  class="mt-4">User 1 : <span id="user1"> </span> </p>
+            <p >User 2 : <span id="user2"> </span>  </p> -->
+        </div>
+
+        <div class="d-flex justify-content-center mb-4 pb-5">
+            
+            <div id="box1">
+                <p class="text-center" id="user_1"> </p>
+
+                <!-- <p class="text-center">user 1</p> -->
+
+                
+                    <img src="pic1.png" height="140px" width="140px" alt="" id="image1">
+                
+                
+
+            </div>
+            <div id="box1" class="text-end ms-4">
+
+                <p class="text-center" id="user_2"> </p>
+
+                <!-- <p class="text-center">user 2</p> -->
+
+                <img src="pic1.png" height="140px" width="140px" alt="" id="image2">
+            </div>
+        </div>
+      
+        <div class="d-flex justify-content-center btn1 ">
+            <button onclick="fun1()" class="mb-4" id="btn1">Roll the Dice</button>
+
+        </div>
+        <div class="d-flex justify-content-center btn2">
+            <button onclick="fun2()" class="mb-4 ">End match</button>
+
+        </div>
+
+        <div class="text-center " id="ansbox">    </div>
+
+
+    </div>
+
+
+
+   
+
+<!-- ////////////-------last---------\\\\\\\\\\\\\\\\ -->
+
+<div class="modal1" id="modal1">
+          
+
+    
+    <div class="last" id="last">
+        <div class="text-end pe-2 mcloseb">
+            <img src="close.png" height="30px" width="30px" onclick="mcloseb()">
+        </div>
+
+        <div class="d-flex justify-content-between px-md-5 px-2 pt-2">
+            <div  class="text-center">
+                <p class="m-0" id="lpnem1" > </p>
+                <p class="m-0  lscore" id="lscore1"> </p>
+                
+            </div>
+
+             <div class="mx-3 lgimg" >
+                <img src="cup1.png" height="300px" width="350px">
+
+            </div>
+
+            <div class="text-center">
+                <p  class="m-0" id="lpnem2"> </p>
+                <p class="m-0  lscore" id="lscore2"> </p>
+                
+            </div>
+
+        </div>
+
+            <!-- ////-----img for small screen---\\\ -->
+        <div class="my-3 smimg text-center" >
+                <img src="cup1.png" height="100px" width="150px">
+
+        </div>
+
+        <div class="d-flex justify-content-center flex-column align-items-center text-center">
+           <h3  id="lh3"> </h3>
+     
+            <button class="my-3" id="newgame"  onclick="startnew()" >START NEW GAME</button>
+        </div>
+
+
+           
+
+    </div>
+
+</div>
+    
+
+  
+    <!--  <img src="win1.gif" alt="" id="gifimg1">
+            <img src="win2.gif" alt="" id="gifimg2"> -->
+
+
+
+
+    <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="dice.js"></script>
+    
+</body>
+</html>
